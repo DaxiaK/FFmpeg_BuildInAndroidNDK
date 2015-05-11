@@ -1,20 +1,12 @@
 
 
-============================================================
-============================================================
-============================================================
-====                                          ==============
-==== ffmpeg-2.2.2 include libx264 ,configure  ==============
-==== for cross compile with AndroidNDK-r9d    ==============
-==== Jim Kuo @201406                          ==============
-====                                          ==============
-============================================================
-============================================================
-============================================================
+#Project Tittle
+ffmpeg-2.2.2 include libx264 ,configure
+for cross compile with AndroidNDK-r9d
+Jim Kuo @201406                         
 
 
-
-A. File Overview
+#A. File Overview
 
 |
 |-  ReadMe
@@ -26,13 +18,10 @@ A. File Overview
 |     |- ffserver.conf
 |
 
-============================================================
-============================================================
 
-B. How to use this project?
+#B. How to use this project?
 
-
-1.BUILD X264 (Optional)
+##1.BUILD X264 (Optional)
 
 1.1 cd /your/ffmpeg+x264/directory/
 
@@ -53,10 +42,8 @@ B. How to use this project?
 
 1.9 if you hope  useing libx264 codec on android in ffmpeg binary , you will  copy x264/build/lib/libx264.so.142 to android , Path on android is: /system/lib/
 
-+++++++++++++++++++
-+++++++++++++++++++
 
-2.BUILD FFMPEG
+##2.BUILD FFMPEG
 
 2.1 cd /your/ffmpeg+x264/directory/
 
@@ -96,10 +83,8 @@ B. How to use this project?
      the symbol .so file has named wiht no number Ex.  libavcodec.so 
      (**note : Don't copy other file except real .so  , it maybe bring about unexpected error)
  
-+++++++++++++++++++
-+++++++++++++++++++
 
-3.CHECK YOUR FFMPEG & X264 CAN WORK
+##3.CHECK YOUR FFMPEG & X264 CAN WORK
 
 3.1 adb shell your devices
 
@@ -121,17 +106,12 @@ ffmpeg version 2.2.2 Copyright (c) 2000-2014 the FFmpeg developers
 Hyper fast Audio and Video encoder
 usage: ffmpeg [options] [[infile options] -i infile]... {[outfile options] outfile}...
 
-
-
 .................
 .......
 ....
 
 
-============================================================
-============================================================
-
-C.how to analyze ffmpeg info:
+#C.how to analyze ffmpeg info:
 
 if you compile ffmpeg many  time , you will analyze how to check your version!
 
@@ -147,17 +127,10 @@ built on Jun 11 2014 13:17:13 with gcc 4.8 (GCC)
          ￣￣￣￣￣￣￣￣￣￣￣     ￣￣￣￣￣￣
          you campile ffmpeg time        gcc version
 
-3.
- configuration: --prefix=/your/path/ffmpeg-2.2.2/android/arm --enable-shared --enable-static --enable-doc --enable-gpl --enable-libx264 --enable-pthreads --enable-ffmpeg --enable-ffplay --enable-ffprobe --enable-ffserver --enable-avdevice --enable-doc --enable-symver --enable-network --enable-debug --enable-protocol=tcp --enable-demuxer=rtsp --enable-cross-compile --cross-prefix=/your/path/Android/android-ndk-r9d/toolchains/arm-linux-androideabi-4.8/prebuilt/linux-x86_64/.....................................
- 
-
+3.configuration: --prefix=/your/path/ffmpeg-2.2.2/android/arm --enable-shared --enable-static --enable-doc --enable-gpl --enable-libx264 --enable-pthreads --enable-ffmpeg --enable-ffplay --enable-ffprobe --enable-ffserver --enable-avdevice --enable-doc --enable-symver --enable-network --enable-debug --enable-protocol=tcp --enable-demuxer=rtsp --enable-cross-compile --cross-prefix=/your/path/Android/android-ndk-r9d/toolchains/arm-linux-androideabi-4.8/prebuilt/linux-x86_64/.....................................
 they are your configure , you can check what option you enable or disable in it!
 
-
-============================================================
-============================================================
-
-D.ffserver
+#D.ffserver
 
 if your enable ffserver, you can use ffserver on android!
 if you will use it,you will prepare ffserver.conf on android ,  Path on android is: /etc/
@@ -168,34 +141,23 @@ start ffserver cmd is:
 ffserver
 
 and if you hope use real time stream, your will key :
-
 ffserver &
 ffmpeg -i input http://localhost:port/feedname
 
 
-============================================================
-============================================================
-
-E.common command line
-
-ffmpeg:
-
+#E.common command line
+##ffmpeg:
 -i  :input
 -re :copy intput file fps 
 -vcodec copy :copy video copy
 -acodec copy :copy audio copy
 -loglever debug : show debug info
 
-
-ffserver :
-
+##ffserver :
 -d :show debug info
 
 If your will find more command ,please follow ffmpeg.org:
 https://www.ffmpeg.org/
-
-============================================================
-============================================================
 
 
 F.Postscript
