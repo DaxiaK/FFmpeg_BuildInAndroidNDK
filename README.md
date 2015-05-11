@@ -160,7 +160,7 @@ If your will find more command ,please follow ffmpeg.org:
 https://www.ffmpeg.org/
 
 
-F.Postscript
+#F.Postscript
 
 Known Issues
 1.RTSP I/O 會顯示需要 pthread support , 但已經包入ffmpeg中卻仍顯示沒有support
@@ -169,7 +169,8 @@ Known Issues
 4.ffserver real time 如果codec全部都copy 需要加上-re 否則會出錯,但再輸出成feed1.ffm時 嘗試訪問會顯示 coedec不相同的issues
 
 
-
+#G.Lincense
+GNU Lesser General Public License (LGPL) version 2.1 or later , follow:https://www.ffmpeg.org/legal.html
 
 
 
