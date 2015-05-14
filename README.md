@@ -3,7 +3,10 @@
 #Project Tittle
 ffmpeg-2.2.2 include libx264 ,configure
 for cross compile with AndroidNDK-r9d
-Jim Kuo @201406                         
+Jim Kuo @201406
+
+Environment:
+Ubnutu 12.04 Lts , Android NDK R9d
 
 
 #A. File Overview
